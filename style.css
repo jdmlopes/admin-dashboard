@@ -1,0 +1,36 @@
+/* :root{
+    
+
+} */
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+div{
+    border: rebeccapurple solid 1px;
+    font-size: 14px;
+}
+
+#main-container{
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+#sidebar{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;    
+}
+
+#content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+#cards{
+    grid-row: 1 / 3;
+}
