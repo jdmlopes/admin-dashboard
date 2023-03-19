@@ -1,8 +1,11 @@
 :root{
     font-family: Helvetica, Arial, sans-serif;
     --font-color: black;
-    --bg-color: grey;
+    --bg-color: #81a195;
+
+
     --top-bg-color: white;
+    --search-bar-bg-color: #c7b793;
     --card-bg-color: white;
     --card-style-color: lightgreen;
 
@@ -19,6 +22,7 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: var(--bg-color);
 }
 
 /* DEBUG */
@@ -32,7 +36,7 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: auto 1fr;
 }
 
 #sidebar{
@@ -94,8 +98,93 @@ body{
 .option:hover{
     scale: 120%;
     filter: brightness(80%);
-    
+}
 
+/* HEADER */
+
+#header{
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: var(--top-bg-color);
+    padding: 10px 15px 25px 30px;
+    box-shadow: 0px 10px 20px -20px rgb(0, 70, 0);
+}
+
+#header-top{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#header svg{
+    width: 45px;
+}
+
+#search-bar{
+    background-color: var(--search-bar-bg-color);
+    flex: 1;
+    height: 30px;
+    border-radius: 30px;
+    border-style: none;
+    outline: none;
+    padding-left: 20px;
+    margin-right: 3rem;
+    font-size: 20px;
+}
+
+.profile-pic{
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#header-bot{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-pic{
+    width: 100px;
+
+}
+
+#header-msg{
+    font-size: 26px;
+    display: grid;
+    gap: 5px;
+}
+
+#header-msg div:first-child{
+    font-size: 18px;
+}
+
+#header-btns{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+
+#header-btns button{
+    font-size: 20px;
+    width: 150px;
+    border-style: none;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: var(--side-font-color);
+    color: var(--top-bg-color);
+}
+
+#header-btns button:hover{
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+/* FEED */
+
+#feed{
+    padding: 20px;
 }
 
 
