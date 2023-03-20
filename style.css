@@ -14,8 +14,11 @@
     --side-bg-color: #06543c;
     /* --side-bg-color: #053426; */
 
-    --side-font-color: #ad8d49;
+    --side-font-color: white;
+    /* --side-font-color: #ad8d49; */
     /* --side-font-color: #c2a25d; */
+
+    --button-color: #ad8d49;
 
 }
 
@@ -57,6 +60,9 @@ body{
 /* SIDEBAR */
 
 #sidebar{
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     justify-items: start;
@@ -64,11 +70,13 @@ body{
     background-color: var(--side-bg-color);
     color: var(--side-font-color);
     font-size: 24px;
+    padding: 15px;
 }
 
 #logo{
     justify-self: center;
-    font-size: 20px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #main-options,
@@ -173,7 +181,7 @@ body{
     border-style: none;
     border-radius: 30px;
     padding: 10px;
-    background-color: var(--side-font-color);
+    background-color: var(--button-color);
     color: var(--top-bg-color);
 }
 
@@ -201,9 +209,11 @@ body{
     background-color: var(--card-bg-color);
     display: grid;
     grid-template-rows: auto auto auto;
-    padding: 15px 15px 10px 30px;
+    padding: 15px 15px 10px 20px;
     /* border-radius: 15px; */
-    box-shadow: 10px 0px var(--card-style-color) inset;
+    border-left: var(--card-style-color) solid 10px;
+    /* box-shadow: 10px 0px var(--card-style-color) inset;
+    padding: 15px 15px 10px 30px; */
     gap: 10px;
 }
 
@@ -220,6 +230,10 @@ body{
     font-weight: bold;
 }
 
+.card-text a{
+    color: var(--card-style-color);
+}
+
 .card-icons{
     justify-self: end;
     padding-right: 20px;
@@ -231,6 +245,12 @@ body{
 }
 
 /* TRENDING */
+/* #trending,
+#ads,
+.card{
+    box-shadow: 3px 3px 50px rgb(4, 36, 4);
+} */
+
 
 #trending,
 #ads{
